@@ -1,0 +1,38 @@
+<html ng-app="myApp">
+    <head></head>
+    <title>Api Call</title>
+    <body>
+        <div ng-controller="myController">
+            <span>{{message}}</span>
+            <table>
+                <thead>
+                    <th>Supplier_name</th>
+                    <th>Assessment_date</th>
+                    <th>Assessment_type</th>
+                    <th>Capabilities</th>
+                    <th>Certifications</th>
+                    <th>Strength</th>
+                    <th>Risk</th>
+                </thead>
+                <tbody ng-repeat="data in result">
+                    <tr>
+                        <!-- <td>{{data}}</td> -->
+                        <td>{{data.supplier_name}}</td>
+                        <td>{{data.assessment_date}}</td>
+                        <td>{{data.assessment_type}}</td>
+                        <td>{{data.capabilities}}</td>
+                        <td>{{data.certifications}}</td>
+                        <td>{{data.strength}}</td>
+                        <td>{{data.risk}}</td>
+                        <!-- <td>{{data.id}}</td>
+                        <td>{{data.name}}</td> -->
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+
+        <script src="https://code.angularjs.org/1.6.4/angular.min.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
